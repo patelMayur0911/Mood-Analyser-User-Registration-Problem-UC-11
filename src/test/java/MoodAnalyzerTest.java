@@ -1,5 +1,6 @@
 import com.moodAnalyzer.MoodAnalyzer;
 
+
 public class MoodAnalyzerTest {
     public static void main(String[] args) {
         MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
@@ -12,5 +13,9 @@ public class MoodAnalyzerTest {
         String message2 = "I am feeling Happy!";
         String mood2 = moodAnalyzer.analyseMood(message2);
         System.out.println("Mood 2: " + mood2); // Expected output: Happy
+
+        String message3 = null;
+        String mood3 = moodAnalyzer.analyseMood(message2);
+        System.out.println("Mood 2: " + mood3); // Expected output: Happy
     }
 }

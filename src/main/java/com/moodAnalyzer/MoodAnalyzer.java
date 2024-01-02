@@ -1,21 +1,27 @@
 package com.moodAnalyzer;
 
+import java.util.Scanner;
+
 public class MoodAnalyzer {
     public String analyseMood(String message) {
-        if (message.contains("Sad")) {
-            return "Sad";
-        } else {
-            return "Happy";
+        try {
+            if (message != null && message.contains("Sad")) {
+                return "Sad";
+            } else {
+                return "Happy";
+            }
+        } catch (NullPointerException e) {
+            return "HAPPY";
         }
     }
 
+
     public static void main(String[] args) {
-        MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
+        MoodAnalyzer m = new MoodAnalyzer();
+//        Scanner scannerText = new Scanner(System.in);
 
-        String message1 = "I am feeling Sad today.";
-        System.out.println("Mood 1: " + message1);
-
-        String message2 = "I am feeling Happy!";
-        System.out.println("Mood 2: " + message2);
+//        System.out.println(" Enter Mood Text : ");
+        String m3 = "" ;
+        System.out.println("Mood 3: " + m.analyseMood(m3));
     }
 }
